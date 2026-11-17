@@ -153,6 +153,7 @@ QURAN = "https://quran.com/"
 DUAS = [
     {
         "id": "sleeping", "cat": "daily",
+        "seo_title": {"ur": "Sone Ki Dua: سونے کی دعا، عربی، ترجمہ اور حوالہ"},
         "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
         "translit": "Bismika Allahumma amootu wa ahya",
         "translit_hi": "बिस्मिका अल्लाहुम्मा अमूतु व अह्या",

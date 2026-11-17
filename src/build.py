@@ -342,7 +342,7 @@ def build_dua(lang, d):
               "citation": d["ref"], "isPartOf": {"@id": absu(p_home(lang)) + "#website"}, "about": {"@type": "Thing", "name": "Dua"}}
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
-    return path, page(lang, path, fit_title(t, u['title_suffix']), u["dua_meta"].format(t=t, w=d["when"][lang], r=d["ref"]),
+    return path, page(lang, path, d.get('seo_title', {}).get(lang) or fit_title(t, u['title_suffix']), u["dua_meta"].format(t=t, w=d["when"][lang], r=d["ref"]),
                       body, {l: p_dua(l, d) for l in LANGS}, [cr_ld, art_ld, faq_ld], og_type="article",
                       image=f"/assets/og/{d['id']}.png", img_alt=f"{t}: {first_arabic(d)}")
 
